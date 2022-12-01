@@ -1,0 +1,22 @@
+{
+    "name": "customthemebynupur",
+    "description": "A Ghost theme",
+    "version": "1.0.0",
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Nupur Saha",
+        "email": "nupur.saha@utplco.com"
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 10  
+        }
+    
+}
