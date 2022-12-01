@@ -17,3 +17,61 @@
     object-fit: contain;
     overflow: hidden;
 }
+
+.post {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+margin: auto;
+}
+.post-header {
+    width: 67%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.post-content h1{
+    width: 50%;
+}
+.post-content-details{
+    width: 50%;
+    font-size: 16px;
+    margin: 30px 0;
+    color: rgb(49, 48, 48);
+}
+.post-content-details img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.post-content-details figure{
+    margin: 0;
+}
+.post-img {
+    
+}
+
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.breadcrumb li+li::before {
+    content: "/";
+    margin: 0 0.5em;
+    opacity: .5;
+}
+
+.breadcrumb-item-current {
+    font-weight: 500;
+}

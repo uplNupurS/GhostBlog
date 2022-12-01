@@ -1,26 +1,23 @@
-<html>
-<head>
-      <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{asset "/gallery.css"}}">
-</head>
-<body>
-    
 <header>
     <h1>{{ @site.title}}</h1>
     {{!-- <h1>{{ @site.description}}</h1> --}}
 </header>
 <main>
-    <div class="gallery">
+
+    <div
+        style=" position: relative; height: auto; width: 90%; margin: auto; padding: 45px 0; display: grid; grid-template-columns: auto auto auto auto; gap: 10px; ">
         {{#foreach posts}}
         {{!-- {{> "loop"}} --}}
-        <div class="img">
-            {{!-- <h1>{{title}}</h1> --}}
-            <img src={{feature_image}} alt="" style="">
-        </div>
+
+        <figure style="margin: 0; padding: 0;">
+            <span class="">
+                <a href="{{url}}">
+                    <img src={{feature_image}} alt="" style="width: 100%; object-fit: contain; overflow: hidden;">
+                </a>
+            </span>
+        </figure>
+
 
         {{/foreach}}
     </div>
 </main>
-</body>
-</html>

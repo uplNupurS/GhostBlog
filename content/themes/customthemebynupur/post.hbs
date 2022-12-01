@@ -1,10 +1,27 @@
+{{!< default}}
+<div>
 {{#post}}
 
-<article>
-    <header>
-        <h1>{{title}}</h1>
-        
+<article class="post">
+    <header class="post-header">
+       <ul class="breadcrumb">
+	<li class="breadcrumb-item"><a href="{{@site.url}}">Home</a></li>
+	{{#primary_tag}}
+    {{!-- <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li> --}}
+  {{/primary_tag}}
+  <li class="breadcrumb-item breadcrumb-current">{{title}}</li>
+</ul>
     </header>
+    <section>
+        <div class="post-content">
+            <h1>{{title}}</h1>
+            <img src={{feature_image}} alt="" style="width: 50%;"> 
+            <div class="post-content-details">
+            {{content}}
+            </div>
+        </div>
+    </section>
 </article>
 
 {{/post}}
+</div>
