@@ -1,27 +1,52 @@
-{{!< default}}
-<div>
-{{#post}}
+{{!< default}} <div>
+    {{#post}}
 
-<article class="post">
-    <header class="post-header">
-       <ul class="breadcrumb">
-	<li class="breadcrumb-item"><a href="{{@site.url}}">Home</a></li>
-	{{#primary_tag}}
-    {{!-- <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li> --}}
-  {{/primary_tag}}
-  <li class="breadcrumb-item breadcrumb-current">{{title}}</li>
-</ul>
-    </header>
-    <section>
-        <div class="post-content">
-            <h1>{{title}}</h1>
-            <img src={{feature_image}} alt="" style="width: 50%;"> 
-            <div class="post-content-details">
-            {{content}}
+    <article class="post">
+        <header class="post-header">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                {{#primary_tag}}
+                {{!-- <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li> --}}
+                {{/primary_tag}}
+                <li class="breadcrumb-item breadcrumb-current">{{title}}</li>
+            </ul>
+        </header>
+        <section>
+            <div class="post-content">
+                <h1>{{title}}</h1>
+                <img src={{feature_image}} alt={{feature_image_alt}} >
+                <div class="post-content-details">
+                    {{content}}
+                </div>
             </div>
-        </div>
-    </section>
-</article>
+            <div class="post-pagination">
+                <nav class="post-pagination-nav">
 
-{{/post}}
-</div>
+                    <div class="">
+                        {{#prev_post}}
+                        <a href="{{url}}">
+                            <p style="font-size: 17px; margin: 0; font-weight: 600; color: rgb(92, 91, 91);">Previous</p>
+                            <span class="pagination-nav-prev">{{title}}</span>
+
+                        </a>
+                        {{/prev_post}}
+                    </div>
+
+                    <div class="">
+                        {{#next_post}}
+                        <a href="{{url}}">
+                            <p style="font-size: 17px; margin: 0; font-weight: 600; color: rgb(92, 91, 91); text-align: right;">Next</p>
+                            <span class="pagination-nav-next">{{title}}</span>
+
+                        </a>
+                        {{/next_post}}
+                    </div>
+
+                </nav>
+            </div>
+        </section>
+
+    </article>
+
+    {{/post}}
+    </div>

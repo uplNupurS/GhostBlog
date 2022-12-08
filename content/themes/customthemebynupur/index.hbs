@@ -1,23 +1,33 @@
-<header>
+{{!< default}} <header class="gallery-header">
     <h1>{{ @site.title}}</h1>
     {{!-- <h1>{{ @site.description}}</h1> --}}
-</header>
-<main>
+    </header>
+    <main>
+        <figure>
 
-    <div
-        style=" position: relative; height: auto; width: 90%; margin: auto; padding: 45px 0; display: grid; grid-template-columns: auto auto auto auto; gap: 10px; ">
-        {{#foreach posts}}
-        {{!-- {{> "loop"}} --}}
+            <div class="gallery-main">
+                {{#foreach posts}}
+                <figure>
 
-        <figure style="margin: 0; padding: 0;">
-            <span class="">
-                <a href="{{url}}">
-                    <img src={{feature_image}} alt="" style="width: 100%; object-fit: contain; overflow: hidden;">
-                </a>
-            </span>
+                    <span>
+                        <a href="{{img_url feature_image}}">
+                            <div class="icon-design">
+                                {{!-- {{> "icons/maximize"}} --}}
+                            </div>
+                        </a>
+                        <div style="position: relative;">
+                        <a href="{{url}}">
+                            <img src={{feature_image}} alt={{feature_image_alt}}>
+                            <div class="hovereffect" style="">
+                                <div>
+                                <h2 style="font-size: 15px; text-decoration: none;  color: rgb(255, 255, 255);padding-left: 12px ">{{title}}</h2>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </span>
+                </figure>
+                {{/foreach}}
+            </div>
         </figure>
-
-
-        {{/foreach}}
-    </div>
-</main>
+    </main>
