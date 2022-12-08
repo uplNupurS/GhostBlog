@@ -1,6 +1,5 @@
 {{!< default}} <div>
     {{#post}}
-
     <article class="post">
         <header class="post-header">
             <ul class="breadcrumb">
@@ -14,39 +13,35 @@
         <section>
             <div class="post-content">
                 <h1>{{title}}</h1>
-                <img src={{feature_image}} alt={{feature_image_alt}} >
+                <img src={{feature_image}} alt={{feature_image_alt}}>
                 <div class="post-content-details">
                     {{content}}
                 </div>
             </div>
             <div class="post-pagination">
                 <nav class="post-pagination-nav">
-
                     <div class="">
                         {{#prev_post}}
                         <a href="{{url}}">
-                            <p style="font-size: 17px; margin: 0; font-weight: 600; color: rgb(92, 91, 91);">Previous</p>
+                            <p style="font-size: 17px; margin: 0; font-weight: 600; color: rgb(92, 91, 91);">Previous
+                            </p>
                             <span class="pagination-nav-prev">{{title}}</span>
-
                         </a>
                         {{/prev_post}}
                     </div>
-
                     <div class="">
                         {{#next_post}}
                         <a href="{{url}}">
-                            <p style="font-size: 17px; margin: 0; font-weight: 600; color: rgb(92, 91, 91); text-align: right;">Next</p>
+                            <p
+                                style="font-size: 17px; margin: 0; font-weight: 600; color: rgb(92, 91, 91); text-align: right;">
+                                Next</p>
                             <span class="pagination-nav-next">{{title}}</span>
-
                         </a>
                         {{/next_post}}
                     </div>
-
                 </nav>
             </div>
         </section>
-
     </article>
-
     {{/post}}
     </div>
