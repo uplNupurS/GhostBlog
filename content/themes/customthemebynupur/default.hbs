@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,46 @@
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href={{asset "asset/gallery.css" }}>
     {{ghost_head}}
+
 </head>
-<body style="padding:10% 4% 5%;">
-    {{{body}}}
+
+<body>
+    <div style="display: flex; justify-content: flex-end; width: 96%;">
+        <label class="switch">
+            <input type="checkbox" onclick="myFunction()">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+
+    <div>
+        {{{body}}}
+    </div>
+    {{!-- <footer class="footer ">
+        {{!-- <div class="footer-inner foot-inner">
+            <div class="gh-copyright">
+                {{@site.title}} © {{date format="YYYY"}}
+            </div>
+            <nav class="footer-menu">
+                {{navigation type="secondary"}}
+            </nav>
+            <div class="gh-powered-by">
+                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
+            </div>
+        </div>
+    </footer> --}}
+    </div>
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script src="{{asset " asset/main.min.js"}}"></script>
     {{ghost_foot}}
 </body>
 
