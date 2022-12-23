@@ -1,4 +1,4 @@
-{{#get "posts"  filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="tags" as |related|}}{{#if related}}
+{{#get "posts" limit="5" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="tags" as |related|}}{{#if related}}
 <section class="related-posts gh-canvas">
 
     <h3 class="related-title">You might also like...</h3>
